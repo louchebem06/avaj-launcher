@@ -3,11 +3,14 @@ package avaj.simulation;
 import java.util.List;
 import avaj.aircraft.AbstractAircraft;
 import avaj.weather.Weather;
+import avaj.file.FileSimulator;
 
 public class Simulation {
 
 	public Simulation(Integer iter, List<AbstractAircraft> aircrafts) {
 		Weather weather = new Weather();
+
+		FileSimulator.createNewFile();
 
 		for (AbstractAircraft aircraft : aircrafts) {
 			weather.add(aircraft);

@@ -3,6 +3,7 @@ avaj/aircraft/AbstractAircraft.java
 avaj/aircraft/type/Baloon.java
 avaj/aircraft/type/Helicopter.java
 avaj/aircraft/type/JetPlane.java
+avaj/file/FileSimulator.java
 avaj/position/Position.java
 avaj/simulation/Simulation.java
 avaj/weather/Weather.java
