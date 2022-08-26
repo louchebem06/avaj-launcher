@@ -1,6 +1,6 @@
-package avaj.aircraft;
+package SAVE.avaj.aircraft;
 
-import avaj.position.Position;
+import SAVE.avaj.position.Position;
 
 public abstract class AbstractAircraft {
 

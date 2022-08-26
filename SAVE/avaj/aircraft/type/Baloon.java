@@ -1,7 +1,7 @@
-package avaj.aircraft.type;
+package SAVE.avaj.aircraft.type;
 
-import avaj.aircraft.AbstractAircraft;
-import avaj.position.Position;
+import SAVE.avaj.aircraft.AbstractAircraft;
+import SAVE.avaj.position.Position;
 
 public class Baloon extends AbstractAircraft {
 

@@ -1,12 +1,12 @@
-package avaj.aircraft.type;
+package SAVE.avaj.aircraft.type;
 
-import avaj.aircraft.AbstractAircraft;
-import avaj.position.Position;
+import SAVE.avaj.aircraft.AbstractAircraft;
+import SAVE.avaj.position.Position;
 
-public class JetPlane extends AbstractAircraft {
+public class Helicopter extends AbstractAircraft {
 
-	public JetPlane(String name, Integer x, Integer y, Integer z) {
-		_type = "JetPlane";
+	public Helicopter(String name, Integer x, Integer y, Integer z) {
+		_type = "Helicopter";
 		_name = name;
 		_id = _lastId;
 		_pos = new Position(x, y, z);
@@ -16,17 +16,17 @@ public class JetPlane extends AbstractAircraft {
 	public void changeWeather(String weather) {
 		switch(weather) {
 			case "SUN":
-				_pos.add("y", 10);
+				_pos.add("x", 10);
 				_pos.add("z", 2);
 				break;
 			case "RAIN":
-				_pos.add("y", 5);
+				_pos.add("x", 5);
 				break;
 			case "FOG":
-				_pos.add("y", 1);
+				_pos.add("x", 1);
 				break;
 			case "SNOW":
-				_pos.add("z", -7);
+				_pos.add("z", -12);
 				break;
 		}
 		System.out.println(this + ": " + _getMessage(weather));

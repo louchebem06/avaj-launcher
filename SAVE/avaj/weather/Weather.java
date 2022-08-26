@@ -1,10 +1,10 @@
-package avaj.weather;
+package SAVE.avaj.weather;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import avaj.aircraft.AbstractAircraft;
-import avaj.position.Position;
+import SAVE.avaj.aircraft.AbstractAircraft;
+import SAVE.avaj.position.Position;
 
 public class Weather {
 	
