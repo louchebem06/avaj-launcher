@@ -7,7 +7,8 @@ public class WeatherTower extends Tower {
 	public String getWeather(Coordinates coordinates) {
 		if (_observer == null)
 			return (null);
-		return ("SNOW");
+		
+		return (WeatherProvider.getCurrentWeather(coordinates));
 	}
 
 	public void changeWeather() {

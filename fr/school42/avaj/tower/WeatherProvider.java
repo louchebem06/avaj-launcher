@@ -4,17 +4,20 @@ import fr.school42.avaj.coordinates.Coordinates;
 
 public class WeatherProvider {
 	
-	private WeatherProvider _weatherProvider;
+	private static WeatherProvider _weatherProvider;
 	private static String [] _weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
-	public WeatherProvider() {}
+	public WeatherProvider() {
+		_weatherProvider = this;
+	}
 
-	public WeatherProvider getProvider() {
+	public static WeatherProvider getProvider() {
 		return (_weatherProvider);
 	}
 
-	public String getCurrentWeather(Coordinates coordinates) {
-		return ("TODO");
+	public static String getCurrentWeather(Coordinates coordinates) {
+		int index = (coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight()) % 4;
+		return (_weather[index]);
 	}
 
 }

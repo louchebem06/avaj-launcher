@@ -27,13 +27,13 @@ public abstract class Aircraft {
 	protected String _getMessage(String weather) {
 		switch (weather) {
 			case "SUN":
-				return ("Chaud");
+				return ("This is hot.");
 			case "SNOW":
-				return ("Neige");
+				return ("My rotor is going to freeze!");
 			case "RAIN":
-				return ("Pluis");
+				return ("Damn you rain! You messed up my baloon.");
 			case "FOG":
-				return ("Brouillard");
+				return ("OMG! Winter is coming!");
 		}
 		return (null);
 	}

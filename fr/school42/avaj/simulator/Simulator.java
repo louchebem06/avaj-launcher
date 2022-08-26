@@ -7,6 +7,7 @@ import fr.school42.avaj.aircraft.Flyable;
 import fr.school42.avaj.parsing.Argv;
 import fr.school42.avaj.parsing.ReadFile;
 import fr.school42.avaj.tower.WeatherTower;
+import fr.school42.avaj.writeFile.WriteFile;
 import fr.school42.avaj.parsing.Parsing;
 
 public class Simulator {
@@ -20,6 +21,7 @@ public class Simulator {
 			Object [] lines = ReadFile.get(av);
 			_iteration = Parsing.getIter(lines);
 			_aircrafts = Parsing.getAircrafts(lines);
+			WriteFile.createNewFile();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}

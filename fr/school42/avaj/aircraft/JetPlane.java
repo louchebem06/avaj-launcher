@@ -2,6 +2,7 @@ package fr.school42.avaj.aircraft;
 
 import fr.school42.avaj.coordinates.Coordinates;
 import fr.school42.avaj.tower.WeatherTower;
+import fr.school42.avaj.writeFile.WriteFile;
 
 public class JetPlane extends Aircraft implements Flyable {
 	
@@ -35,8 +36,14 @@ public class JetPlane extends Aircraft implements Flyable {
 
 		if (_coodinates.getHeight() == 0)
 			_weatherTower.unregister(this);
-		else
-			System.out.println(this + ": " + _getMessage(weather));
+		else {
+			try {
+				WriteFile.print(this + ": " + _getMessage(weather));
+			} catch (Exception e) {
+				System.out.println("Error: " + e);
+				System.exit(1);
+			}
+		}
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
