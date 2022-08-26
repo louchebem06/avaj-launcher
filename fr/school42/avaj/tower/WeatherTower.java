@@ -4,11 +4,13 @@ import fr.school42.avaj.coordinates.Coordinates;
 
 public class WeatherTower extends Tower {
 	
-	public static void getWeather(Coordinates coordinates) {
-
+	public String getWeather(Coordinates coordinates) {
+		if (_observer == null)
+			return (null);
+		return ("SNOW");
 	}
 
-	public static void changeWeather() {
+	public void changeWeather() {
 		
 	}
 

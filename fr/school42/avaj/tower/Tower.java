@@ -4,18 +4,25 @@ import fr.school42.avaj.aircraft.Flyable;
 
 public class Tower {
 	
-	private static Flyable _observer;
+	protected Flyable _observer = null;
 
-	public static void register(Flyable flyable) {
+	public void register(Flyable flyable) {
+		_observer = flyable;
+		System.out.println(this + ": " + _observer + " registered to weather tower.");
+	}
+
+	public void unregister(Flyable flyable) {
+		if (_observer != null)
+			System.out.println(this + ": " + _observer + " unregistered from weather tower.");
+		_observer = null;
+	}
+
+	public void conditionsChanged() {
 
 	}
 
-	public static void unregister(Flyable flyable) {
-		
-	}
-
-	public static void conditionsChanged() {
-
+	public String toString() {
+		return ("Tower says");
 	}
 
 }

@@ -12,11 +12,36 @@ public class JetPlane extends Aircraft implements Flyable {
 	}
 
 	public void updateCondition() {
+		String weather = _weatherTower.getWeather(_coodinates);
+		
+		if (weather == null)
+			return;
 
+		switch (weather) {
+			case "SUN":
+				_coodinates.addLatitude(10);
+				_coodinates.removeHeight(2);
+				break;
+			case "RAIN":
+				_coodinates.addLatitude(5);
+				break;
+			case "FOG":
+				_coodinates.addLatitude(1);
+				break;
+			case "SNOW":
+				_coodinates.removeHeight(7);
+				break;
+		}
+
+		if (_coodinates.getHeight() == 0)
+			_weatherTower.unregister(this);
+		else
+			System.out.println(this + ": " + _getMessage(weather));
 	}
 
 	public void registerTower(WeatherTower weatherTower) {
-
+		_weatherTower = weatherTower;
+		_weatherTower.register(this);
 	}
 
 }

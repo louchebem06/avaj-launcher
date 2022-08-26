@@ -22,4 +22,32 @@ public class Coordinates {
 		return (_height);
 	}
 
+	public void addLongitude(int v) {
+		_longiture += v;
+	}
+
+	public void addLatitude(int v) {
+		_latitude += v;
+	}
+
+	public void addHeight(int v) {
+		_height += v;
+		if (_height > 100)
+			_height = 100;
+	}
+
+	public void removeLongitude(int v) {
+		_longiture -= v;
+	}
+
+	public void removeLatitude(int v) {
+		_latitude -= v;
+	}
+
+	public void removeHeight(int v) {
+		_height -= v;
+		if (_height < 0)
+			_height = 0;
+	}
+
 }
