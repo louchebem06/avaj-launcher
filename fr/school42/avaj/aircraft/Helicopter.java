@@ -1,6 +1,5 @@
 package fr.school42.avaj.aircraft;
 
-import fr.school42.avaj.coordinates.Coordinates;
 import fr.school42.avaj.tower.WeatherTower;
 import fr.school42.avaj.writeFile.WriteFile;
 
@@ -8,7 +7,7 @@ public class Helicopter extends Aircraft implements Flyable {
 
 	private WeatherTower _weatherTower;
 
-	public Helicopter(String name, Coordinates coodinates) {
+	Helicopter(String name, Coordinates coodinates) {
 		super(name, coodinates);
 	}
 

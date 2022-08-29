@@ -1,7 +1,5 @@
 package fr.school42.avaj.aircraft;
 
-import fr.school42.avaj.coordinates.Coordinates;
-
 public class AircraftFactory {
 	
 	public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height) throws Exception {

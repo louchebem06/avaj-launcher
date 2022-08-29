@@ -1,6 +1,6 @@
 package fr.school42.avaj.tower;
 
-import fr.school42.avaj.coordinates.Coordinates;
+import fr.school42.avaj.aircraft.Coordinates;
 
 public class WeatherTower extends Tower {
 	

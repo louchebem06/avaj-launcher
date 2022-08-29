@@ -1,7 +1,5 @@
 package fr.school42.avaj.aircraft;
 
-import fr.school42.avaj.coordinates.Coordinates;
-
 public abstract class Aircraft {
 
 	protected long _id;
@@ -9,7 +7,7 @@ public abstract class Aircraft {
 	protected Coordinates _coodinates;
 	private static long _idCounter = 0;
 
-	public Aircraft(String name, Coordinates coodinates) {
+	protected Aircraft(String name, Coordinates coodinates) {
 		_id = nextId();
 		_name = name;
 		_coodinates = coodinates;
