@@ -5,7 +5,7 @@ import fr.school42.avaj.writeFile.WriteFile;
 
 public class Tower {
 	
-	protected Flyable _observer = null;
+	private Flyable _observer = null;
 
 	public void register(Flyable flyable) {
 		_observer = flyable;
@@ -29,7 +29,7 @@ public class Tower {
 		_observer = null;
 	}
 
-	public void conditionsChanged() {
+	protected void conditionsChanged() {
 
 	}
 

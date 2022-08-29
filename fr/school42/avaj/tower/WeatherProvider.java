@@ -7,7 +7,7 @@ public class WeatherProvider {
 	private static WeatherProvider _weatherProvider;
 	private static String [] _weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
-	public WeatherProvider() {
+	private WeatherProvider() {
 		_weatherProvider = this;
 	}
 
