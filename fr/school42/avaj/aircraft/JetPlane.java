@@ -21,7 +21,7 @@ public class JetPlane extends Aircraft implements Flyable {
 		switch (weather) {
 			case "SUN":
 				_coodinates.addLatitude(10);
-				_coodinates.removeHeight(2);
+				_coodinates.addHeight(2);
 				break;
 			case "RAIN":
 				_coodinates.addLatitude(5);
