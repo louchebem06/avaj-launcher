@@ -4,8 +4,8 @@ import fr.school42.avaj.aircraft.Coordinates;
 
 public class WeatherProvider {
 	
-	private static WeatherProvider _weatherProvider;
-	private static String [] _weather = {"RAIN", "FOG", "SUN", "SNOW"};
+	private static WeatherProvider _weatherProvider = new WeatherProvider();
+	private String [] _weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
 	private WeatherProvider() {
 		_weatherProvider = this;
@@ -15,7 +15,7 @@ public class WeatherProvider {
 		return (_weatherProvider);
 	}
 
-	public static String getCurrentWeather(Coordinates coordinates) {
+	public String getCurrentWeather(Coordinates coordinates) {
 		int index = (coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight()) % 4;
 		return (_weather[index]);
 	}

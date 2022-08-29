@@ -26,11 +26,15 @@ public class Tower {
 				System.exit(1);
 			}
 		}
-		_observer = null;
+		conditionsChanged();
+	}
+
+	protected Flyable getObserver() {
+		return (_observer);
 	}
 
 	protected void conditionsChanged() {
-
+		_observer = null;
 	}
 
 	public String toString() {
